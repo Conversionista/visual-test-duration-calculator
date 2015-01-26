@@ -1,0 +1,10 @@
+{
+  "name": "test-duration-calc",
+  "private": true,
+  "dependencies": {
+    "bootstrap-sass-official": "~3.2.0",
+    "bootstrapvalidator": "~0.5.3",
+    "chartjs": "~1.0.1",
+    "numeraljs": "~1.5.3"
+  }
+}
