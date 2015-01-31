@@ -68,6 +68,7 @@ module.exports = function (grunt) {
       }
     },
 
+    //Auto deploy to github pages on build
     buildcontrol: {
       options: {
         dir: 'dist',

@@ -186,7 +186,7 @@ function calc() {
 
         } else {
 
-            $('#renderHere').append('<hr /><h3>Detactable effect after number of days</h3><canvas id="myChart" width="' + chartWidth + '" height="' + chartWidth / 1.6180 + '"></canvas>');
+            $('#renderHere').append('<hr /><h3>Detactable change after number of days</h3><canvas id="myChart" width="' + chartWidth + '" height="' + chartWidth / 1.6180 + '"></canvas>');
 
         }
 
