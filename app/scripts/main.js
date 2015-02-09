@@ -9,6 +9,7 @@ function calc() {
     var cr = $('#conversionRate').val();
     var avgNoVis = $('#dailyVisitors').val();
     var weeklyYes = $('input[name=week]:checked').length;
+    var canvasDiv = $('#renderHere');
 
     var cycle;
     var minCycle;
@@ -186,7 +187,7 @@ function calc() {
 
         } else {
 
-            $('#renderHere').append('<hr /><h3>Detactable change after number of days</h3><canvas id="myChart" width="' + chartWidth + '" height="' + chartWidth / 1.6180 + '"></canvas>');
+            $(id).width(chartWidth).height(chartWidth / 1.6180);
 
         }
 
@@ -206,7 +207,13 @@ function calc() {
 
         //Set variable to 
         hasRenderedChart = true;
+        $(id).show();
     }
 
-    renderChart('myChart');
+    
+    renderChart('#myChart');
 }
+
+// $( document ).ready(function() {
+//     calc();
+// });
