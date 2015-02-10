@@ -139,7 +139,23 @@ function calc() {
 
         doCalc(store, dataSet95);
 
-        data = {
+        
+        
+        renderText('span.time', 'span.change');
+        
+
+    }
+
+    //Function to render the chart
+    function renderChart(){
+
+        //Get width of the a column
+        var chartWidth = $('.col-md-12').width();
+        $('#myChart').attr('width', chartWidth).attr('height', chartWidth / 1.6180);
+        //Make calculations
+        calculate();
+
+        var data = {
             labels: labels,
             datasets: [
                 {
@@ -167,32 +183,20 @@ function calc() {
 
         };
 
-        renderText('span.time', 'span.change');
-
-    }
-
-    //Function to render the chart
-    function renderChart(id){
-
-        //Get width of the a column
-        var chartWidth = $('.col-md-12').width();
-        
-        //Make calculations
-        calculate();
+        console.log(hasRenderedChart);
         
         //Destroy previous chart if exists else make canvas to paint the new chart on
         if(hasRenderedChart === true){
 
             myLineChart.destroy();
 
-        } else {
-
-            $(id).width(chartWidth).height(chartWidth / 1.6180);
-
         }
 
         //Create new chart with new data
-        var ctx = document.getElementById(id).getContext('2d');
+        var ctx = document.getElementById('myChart').getContext('2d');
+        ctx.canvas.width = chartWidth;
+        ctx.canvas.height = chartWidth / 1.6180;
+        
         myLineChart = new Chart(ctx).Line(data, {
             //Boolean - Whether the line is curved between points
             bezierCurve : false,
@@ -204,16 +208,16 @@ function calc() {
             scaleStartValue: 0
 
         });
-
+        
         //Set variable to 
         hasRenderedChart = true;
-        $(id).show();
+        $('#renderHere').show();
     }
 
+    renderChart();
     
-    renderChart('#myChart');
-}
 
-// $( document ).ready(function() {
-//     calc();
-// });
+}
+$( document ).ready(function() {
+    calc();
+});
