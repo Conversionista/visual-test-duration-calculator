@@ -6,6 +6,7 @@
     "bootstrapvalidator": "~0.5.3",
     "chartjs": "~1.0.1",
     "numeraljs": "~1.5.3",
-    "bootstrap-toggle": "~2.2.0"
+    "bootstrap-toggle": "~2.2.0",
+    "font-awesome": "fontawesome#~4.4.0"
   }
 }

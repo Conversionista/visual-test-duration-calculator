@@ -31,7 +31,7 @@
     @include transition();
     color: #333;
     text-decoration: none;
-    
+
     &:hover {
       @include transition();
       text-decoration: underline;
@@ -60,7 +60,7 @@
 
 .glyphicon-heart {
   @include transition();
-  
+
   &:hover{
     color: $red;
   }
@@ -102,13 +102,29 @@ a:hover {
   border-right: none;
   padding: 1px;
   outline: none;
-  
+
   &[name="kpi"] {
       width: 50%;
   }
-  
+
 }
 
 .btn-cta {
   text-transform: uppercase;
+}
+
+.footNote {
+  font-style: italic;
+  text-align: center;
+  color: #666;
+}
+.note {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #666;
+  display: block;
+}
+.share-bar,
+article {
+  margin-bottom: 2em;
 }
